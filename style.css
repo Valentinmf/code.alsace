@@ -1,0 +1,76 @@
+@use postcss-nested;
+
+@font-face {
+  font-family: "Pretendo";
+  src:
+    url("https://manzdev.github.io/twitch-nintendo-nes/fonts/pretendo.woff2") format("woff2"),
+    url("https://manzdev.github.io/twitch-nintendo-nes/fonts/pretendo.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Press Start 2P";
+  src:
+    url("https://manzdev.github.io/twitch-nintendo-nes/fonts/press-start-2p.woff2") format("woff2"),
+    url("https://manzdev.github.io/twitch-nintendo-nes/fonts/press-start-2p.woff") format("woff");
+  font-display: swap;
+}
+
+body {
+  background: #E5393F;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nes-controller {
+  position: absolute;
+  transform: translate(0, -100px);
+}
+
+.created {
+  background: 
+    url(https://assets.codepen.io/154065/internal/avatars/users/default.png),
+    linear-gradient(to bottom, #884ced, #ec1cce);
+  background-size: 75px 75px, cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 75px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 2em;
+  
+  & span,
+  & h2,
+  & p,
+  & a {
+    font-family: Montserrat;
+    margin: 0;
+  }
+  
+  & a,
+  & p,
+  & span {
+    color: #fff;    
+  }
+  
+  & h2 {
+    font-weight: 700;
+    transform: translate(0, -4px);    
+  }
+  
+  & a {
+    text-decoration-color: rgba(255,255,255,0.4);
+  }
+  
+  & a:hover {
+    color: #e6e82a;
+  }
+}
